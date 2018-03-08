@@ -1,0 +1,16 @@
+{
+  "SQLCommands": {
+    "sql_regist": "INSERT INTO user_table (username, password,email,phone,img_src) VALUES(?,?,?,?,?)",
+    "sql_loginP": "SELECT * FROM user_table WHERE phone =? AND password = ?",
+    "sql_loginE": "SELECT * FROM user_table WHERE email =? AND password = ?",
+    "sql_forget_passwordP":"UPDATE user_table SET password=? WHERE phone=?",
+    "sql_forget_passwordE": "UPDATE user_table SET password=? WHERE email=?",
+    "sql_updateP": "UPDATE user_table SET password=? WHERE phone=?",
+    "sql_updateE": "UPDATE user_table SET password=? WHERE email=?",
+    "sql_selectE": "SELECT * FROM user_table WHERE email=?",
+    "sql_selectP": "SELECT * FROM user_table WHERE phone=?",
+    "sql_add_daytask":"INSERT INTO day_plans (dpriority,dcontent,dcategory,ddate,dstate,uid) VALUES(?,?,?,?,?,?)",
+    "sql_selectUID":"SELECT * FROM user_table WHERE uid=?",
+    "sql_query_daytask":"SELECT * FROM day_plans WHERE uid = ? and ddate like ?"
+  }
+}
